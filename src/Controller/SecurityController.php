@@ -80,6 +80,7 @@ class SecurityController extends Controller {
             //on active par défaut
             $user->setIsActive(true);
             $user->addRole("ROLE_SUPER_ADMIN");
+            
             // 4) save the User!
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);

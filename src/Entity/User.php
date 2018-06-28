@@ -32,7 +32,7 @@ class User implements AdvancedUserInterface, \Serializable {
      */
     private $nomcomplet;
  /**
-     * @ORM\Column(type="integer", length=50, unique=true)
+     * @ORM\Column(type="integer", length=200, unique=true)
      * @Assert\NotBlank()
      */
     private $Numpiece;
