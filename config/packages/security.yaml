@@ -22,26 +22,14 @@ security:
                 check_path: login
             logout:
                 path:  /logout
-<<<<<<< HEAD
                 target: /login
             
     role_hierarchy:
         ROLE_ADMIN:      ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-=======
-                target: /
-            
-    role_hierarchy:
-        ROLE_ADMIN:      ROLE_USER
-        #ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
->>>>>>> 2b1363964c25aa7d6b18bf99d5eba3e54b62b014
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
-<<<<<<< HEAD
         - { path: ^/membre, roles: ROLE_USER }
-=======
-        - { path: ^/member, roles: ROLE_USER }
->>>>>>> 2b1363964c25aa7d6b18bf99d5eba3e54b62b014
