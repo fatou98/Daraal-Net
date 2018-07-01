@@ -47,4 +47,14 @@ class CommandesRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findCommandes($etat)
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('etat= :val')
+            ->setParameter('val', $etat)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+    
 }

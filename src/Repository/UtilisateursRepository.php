@@ -47,4 +47,32 @@ class UtilisateursRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findOneById($id)
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('id = :val')
+            ->setParameter('val', $id)
+            ->getQuery()
+            ->getOneOrNullResult() 
+        ;
+    }
+
+    public function findOneByNomComplet($nomcomplet)
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('nomcomplet = :val')
+            ->setParameter('val', $nomcomplet)
+            ->getQuery()
+            ->getOneOrNullResult() 
+        ;
+    }
+
+    public function findAll()
+    {
+        return $this->createQueryBuilder('u')
+            ->getQuery()
+            ->getResult() 
+        ;
+    }
 }
